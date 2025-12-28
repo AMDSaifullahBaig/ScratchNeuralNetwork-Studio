@@ -69,7 +69,7 @@ class Layer:
         raise NotImplementedError
 
 class Connected_Layers(Layer):
-    def __init__(self,input_size,output_size,learning_rate,optimizer="adam"):
+    def __init__(self,input_size,output_size,learning_rate=0.01,optimizer="adam"):
         limit=np.sqrt(1/input_size)
         self.weights=np.random.uniform(-limit,limit,(input_size,output_size))
         self.bias=np.zeros((1,output_size))

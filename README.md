@@ -1,6 +1,6 @@
 # Modular Neural Network Engine
 **Author:** MD Saifullah Baig.A  
-**Version:** 1.0  
+**Version:** 2.0  
 **Status:** Active
 
 ## 📌 Overview
@@ -18,11 +18,17 @@ This repository contains a modular, scratch-built Deep Learning framework in Pyt
 Neural_Network_Scratch_App/
 │
 ├── Neural_Network_Engine.py            # The Core Computation Library
+├── Neural_Network_Main.py              # Main Execution Script
 ├── Neural_Network_Engine.ipynb         #Easy Reference material
+├── Neural_Network_Main.ipynb           #Easy Reference material
 ├── requirements.txt                    # List of dependencies
 ├── README.md                           # Project Documentation
 └── .gitignore                          # Ignored files (.venv, __pycache__)
 ```
+## 💻 Usage
+To run the diabetes regression example:
+```bash
+python Neural_Network_Main.py 
+```
 
 > **Note:** Detailed installation and usage documentation is currently being written and will be updated shortly.
->>>>>>> be535b9 (Initial release: ScratchNeuralNetwork Studio v1.0)
