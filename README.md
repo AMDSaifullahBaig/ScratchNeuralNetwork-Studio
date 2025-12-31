@@ -1,34 +1,41 @@
-# Modular Neural Network Engine
+# ScratchNet Studio (v3.1)
 **Author:** MD Saifullah Baig.A  
 **Version:** 2.0  
 **Status:** Active
 
-## 📌 Overview
-This repository contains a modular, scratch-built Deep Learning framework in Python. It is designed to demystify the internal mechanics of deep learning by implementing **Backpropagation**, **Optimizers (SGD, Adam)**, and **Dynamic Layer Stacking** entirely from scratch using NumPy, without relying on auto-differentiation libraries like PyTorch or TensorFlow.
+**A Professional, Modular Deep Learning Framework built from scratch in Python.**
 
-## 🚀 Key Features
-* **Modular Architecture:** Build networks by stacking layers dynamically (similar to Keras Sequential API).
-* **Advanced Optimizers:** Custom implementation of **Adam** (Adaptive Moment Estimation) and **SGD** (Stochastic Gradient Descent).
-* **Vectorized Operations:** High-performance matrix computations using NumPy.
-* **Activation Functions:** Includes Sigmoid, Tanh, and ReLU with their respective derivatives.
-* **Visualization:** Real-time tracking of training loss.
+## 📌 Overview
+ScratchNet Studio is a lightweight, education-focused Neural Network framework that implements Deep Learning fundamentals—including **Backpropagation**, **Optimizers (Adam/SGD)**, and **Activation Functions**—using only NumPy.
+
+This version (v3.1) introduces a modular architechture for gui implementation
+
+## 🚀 Key Features (New in v3)
+
+### 1. Vectorized Neural Engine (v3.0)
+* **High Performance:** Replaced loop-based learning with **Matrix Operations** (Vectorization), allowing for instant predictions and faster training.
+* **Mini-Batch Gradient Descent:** Updates weights using stable batches (default: 10) instead of stochastic single-sample updates.
+* **Smart Shuffling:** Automatically shuffles training data every epoch to prevent overfitting.
+
+### 2. Modular Architecture
+* **Backend Controller (v2.0):** Logic is strictly separated from the UI using a dedicated `Neural_Network_Backend` class.
+* **Smart Connect:** The architecture builder automatically detects and matches input/output shapes to prevent errors.
+
+---
 
 ## 📂 Project Structure
+
 ```text
-Neural_Network_Scratch_App/
+Project_Root/
 │
-├── Neural_Network_Engine.py            # The Core Computation Library
-├── Neural_Network_Main.py              # Main Execution Script
-├── Neural_Network_Engine.ipynb         #Easy Reference material
-├── Neural_Network_Main.ipynb           #Easy Reference material
-├── requirements.txt                    # List of dependencies
-├── README.md                           # Project Documentation
-└── .gitignore                          # Ignored files (.venv, __pycache__)
-```
-## 💻 Usage
-To run the diabetes regression example:
-```bash
-python Neural_Network_Main.py 
+├── Neural_Network_GUI.py       # [ENTRY POINT] Run this file to start the App
+├── README.md                   # Documentation
+├── CHANGELOG.md                # Version History
+│
+└── py_code/                    # Core Logic Module
+    ├── __init__.py             # Package initializer
+    ├── Neural_Network_Engine.py # The Math (Layers, Activations, Optimizers)
+    └── Neural_Network_Main.py   # The Backend Controller (Data Loading, State)
 ```
 
 > **Note:** Detailed installation and usage documentation is currently being written and will be updated shortly.
